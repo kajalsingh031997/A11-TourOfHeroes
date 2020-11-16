@@ -1,6 +1,7 @@
 .container-fluid{
     background: linear-gradient(45deg, black, transparent);
     padding: 2em;
+    position: relative;
 }
 .main-container{
     text-align: center;

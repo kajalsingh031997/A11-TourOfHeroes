@@ -1,0 +1,25 @@
+@media (min-width: 576px){
+    .top-heroes-dashboar{
+        display: grid;
+        grid-template-areas: "a a a a";
+    }
+}
+
+.cards{
+    background: whitesmoke;
+    padding: 1em;
+    margin: 1em;
+    cursor: pointer;
+    height: 150px;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 0 5px 10px 0;
+}
+
+h1{
+    color: white;
+}
+h4{
+    position: relative;
+    top: 30%;
+}

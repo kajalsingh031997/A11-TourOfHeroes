@@ -1,0 +1,34 @@
+<div class="col-sm-12">
+    <h1 style="text-align: center;">Top Heroes</h1>
+    <div class="top-heroes-dashboar">
+        <div class="cards" *ngFor="let index of heroData" data-toggle="modal" data-target="#exampleModal"
+            (click)="selectedCard(index)">
+            <h4>{{index.name}}</h4>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true" *ngIf="selectedHero">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{selectedHero.name}} Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div><span>id: </span>{{selectedHero.id}}</div>
+                <div>
+                    <label>name:
+                        <input [(ngModel)]="selectedHero.name" placeholder="name" />
+                    </label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
